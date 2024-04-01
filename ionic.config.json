@@ -1,0 +1,7 @@
+{
+  "name": "retail-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
