@@ -1,0 +1,22 @@
+ion-content{
+  --background: url(/assets/img/blue.gif) no-repeat center center / cover;
+
+}
+
+
+img{
+  padding-top: 40vh;
+  width: 100%;
+  max-width: 500px;
+}
+
+.rotate-center{
+  animation: rotate-center 0.4s;
+}@keyframes rotate-center {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
