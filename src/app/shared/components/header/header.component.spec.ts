@@ -1,24 +1,28 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
-
+import { Component, Inject, Input, OnInit, inject } from '@angular/core';
+import { UtilsService } from 'src/app/services/utils.service';
 import { HeaderComponent } from './header.component';
 
+jest.mock('@angular/core');
+jest.mock('src/app/services/utils.service');
+
 describe('HeaderComponent', () => {
-  let component: HeaderComponent;
-  let fixture: ComponentFixture<HeaderComponent>;
+  let instance;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+  beforeEach(() => {
+    instance = new HeaderComponent();
+  });
 
-    fixture = TestBed.createComponent(HeaderComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  }));
+  it('instance should be an instanceof HeaderComponent', () => {
+    expect(instance instanceof HeaderComponent).toBeTruthy();
+  });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should have a method ngOnInit()', () => {
+    // instance.ngOnInit();
+    expect(false).toBeTruthy();
+  });
+
+  it('should have a method dissmissModal()', () => {
+    // instance.dissmissModal();
+    expect(false).toBeTruthy();
   });
 });

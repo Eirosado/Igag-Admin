@@ -1,24 +1,21 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
-
+import { Component, OnInit } from '@angular/core';
 import { LogoComponent } from './logo.component';
 
+jest.mock('@angular/core');
+
 describe('LogoComponent', () => {
-  let component: LogoComponent;
-  let fixture: ComponentFixture<LogoComponent>;
+  let instance;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [ LogoComponent ],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+  beforeEach(() => {
+    instance = new LogoComponent();
+  });
 
-    fixture = TestBed.createComponent(LogoComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  }));
+  it('instance should be an instanceof LogoComponent', () => {
+    expect(instance instanceof LogoComponent).toBeTruthy();
+  });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should have a method ngOnInit()', () => {
+    // instance.ngOnInit();
+    expect(false).toBeTruthy();
   });
 });

@@ -1,24 +1,28 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
-
+import { Component, Input, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { CustomInputComponent } from './custom-input.component';
 
+jest.mock('@angular/core');
+jest.mock('@angular/forms');
+
 describe('CustomInputComponent', () => {
-  let component: CustomInputComponent;
-  let fixture: ComponentFixture<CustomInputComponent>;
+  let instance;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [ CustomInputComponent ],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+  beforeEach(() => {
+    instance = new CustomInputComponent();
+  });
 
-    fixture = TestBed.createComponent(CustomInputComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  }));
+  it('instance should be an instanceof CustomInputComponent', () => {
+    expect(instance instanceof CustomInputComponent).toBeTruthy();
+  });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should have a method ngOnInit()', () => {
+    // instance.ngOnInit();
+    expect(false).toBeTruthy();
+  });
+
+  it('should have a method showOrHidePassword()', () => {
+    // instance.showOrHidePassword();
+    expect(false).toBeTruthy();
   });
 });
