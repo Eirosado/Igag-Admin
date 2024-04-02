@@ -17,3 +17,4 @@ This is an Angular17 + Ionicv7 app built with Ionic CLI. The app consists of a b
 
 1. Run the app locally: `ionic serve`.
 2. Open your browser and navigate to `http://localhost:8100`.
+3. Login for Test User: test@test.com && Password: test1234
